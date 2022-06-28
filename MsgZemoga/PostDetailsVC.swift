@@ -17,23 +17,34 @@ class PostDetailsVC : UIViewController {
     @IBOutlet weak var authorWebsite: UILabel!
     
     @IBOutlet weak var commentsCollectionView: UICollectionView!
-
-    //var post = PostDetail(userId: 0, title: "", body: "")
+    
     var postId : Int!
+    var userId : Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         ApiControllerTwo().fetchPosts(postId: postId){
             [weak self] (post) in
-
+            
             DispatchQueue.main.async {
                 self?.detailTitle.text = post.title
                 self?.detailDescription.text = post.body
             }
-            	
         }
+        
+        ApiControllerThree().fetchPosts(userId: userId){
+            [weak self] (user) in
+            
+            DispatchQueue.main.async {  
+                self?.authorName.text = user.name
+                self?.authorEmail.text = user.email
+                self?.authorPhone.text = user.phone
+                self?.authorWebsite.text = user.website
+            }
+        }
+        
     }
-    
 
     
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

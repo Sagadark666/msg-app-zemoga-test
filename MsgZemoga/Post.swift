@@ -11,6 +11,7 @@ import Foundation
 struct Post : Codable{
 
     var id: Int
+    var userId : Int
     var title : String
     
 }	

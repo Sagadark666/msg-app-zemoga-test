@@ -34,6 +34,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let postDetailVC = segue.destination as? PostDetailsVC
             let postCard = sender as! PostCellCT
             postDetailVC?.postId = postCard.postId
+            postDetailVC?.userId = postCard.userId
         }
     }
     
@@ -46,6 +47,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let post = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCellCT
         
         post.postId = posts[indexPath.row].id
+        post.userId = posts[indexPath.row].userId
+        
         post.postTitle.text = posts[indexPath.row].title
         post.favIcon.image = UIImage(named: "star-off")
         

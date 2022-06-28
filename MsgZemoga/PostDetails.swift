@@ -12,5 +12,4 @@ struct PostDetail : Codable{
     var userId : Int
     var title: String
     var body : String
-    
 }

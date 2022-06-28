@@ -1,21 +1,19 @@
 //
-//  File.swift
+//  ApiControllerThree.swift
 //  MsgZemoga
 //
-//  Created by user222400 on 6/27/22.
+//  Created by user222400 on 6/28/22.
 //
-
 
 import Foundation
 
-class ApiControllerTwo {
+class ApiControllerThree {
 
-    var endpoint = "https://jsonplaceholder.typicode.com/posts/"
-    //var posts =  [Post]()
+    var endpoint = "https://jsonplaceholder.typicode.com/users/"
     
-    func fetchPosts(postId: Int, completionHandler: @escaping (PostDetail) -> Void){
+    func fetchPosts(userId: Int, completionHandler: @escaping (User) -> Void){
         
-        endpoint = endpoint + String(postId)
+        endpoint = endpoint + String(userId)
         let urlRequest = URL(string: endpoint)
         
         let request = URLRequest(url: urlRequest!)
@@ -36,9 +34,10 @@ class ApiControllerTwo {
                  // Parse JSON data
                  if let data = data {
                      let decoder = JSONDecoder()
-    
+                    
                         do {
-                            completionHandler(try decoder.decode(PostDetail.self, from:data))
+                            let user = try decoder.decode(User.self, from:data)
+                            completionHandler(user)
                         } catch {
                             print(error)
                         }

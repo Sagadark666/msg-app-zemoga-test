@@ -26,6 +26,8 @@
 		99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A01286B95EF0099D82A /* PostDetails.swift */; };
 		99DD8A06286B95EF0099D82A /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 99DD8A02286B95EF0099D82A /* Base.lproj */; };
 		99DD8A08286BA4330099D82A /* PostOpenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A07286BA4330099D82A /* PostOpenDelegate.swift */; };
+		99DD8A0A286BB64A0099D82A /* ApiControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A09286BB64A0099D82A /* ApiControllerThree.swift */; };
+		99DD8A0C286BB7720099D82A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A0B286BB7720099D82A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		99DD8A01286B95EF0099D82A /* PostDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetails.swift; sourceTree = "<group>"; };
 		99DD8A02286B95EF0099D82A /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		99DD8A07286BA4330099D82A /* PostOpenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOpenDelegate.swift; sourceTree = "<group>"; };
+		99DD8A09286BB64A0099D82A /* ApiControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiControllerThree.swift; sourceTree = "<group>"; };
+		99DD8A0B286BB7720099D82A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,8 @@
 				99AE377E2868D0F000DAAF31 /* ApiController.swift */,
 				992F293C286A5A97003F322C /* PostCellCT.swift */,
 				99DD8A07286BA4330099D82A /* PostOpenDelegate.swift */,
+				99DD8A09286BB64A0099D82A /* ApiControllerThree.swift */,
+				99DD8A0B286BB7720099D82A /* User.swift */,
 			);
 			path = MsgZemoga;
 			sourceTree = "<group>";
@@ -289,11 +295,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DD8A0C286BB7720099D82A /* User.swift in Sources */,
 				992F293D286A5A97003F322C /* PostCellCT.swift in Sources */,
 				99DD89FE286B95C10099D82A /* ApiControllerTwo.swift in Sources */,
 				99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */,
 				99DD8A08286BA4330099D82A /* PostOpenDelegate.swift in Sources */,
 				994483132868B7C0000D16CF /* MsgZemoga.xcdatamodeld in Sources */,
+				99DD8A0A286BB64A0099D82A /* ApiControllerThree.swift in Sources */,
 				9944830D2868B7C0000D16CF /* ViewController.swift in Sources */,
 				99AE377F2868D0F000DAAF31 /* ApiController.swift in Sources */,
 				994483092868B7C0000D16CF /* AppDelegate.swift in Sources */,
