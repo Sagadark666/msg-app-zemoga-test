@@ -10,6 +10,5 @@ import UIKit
 class PostCellCT: UICollectionViewCell {
     
     @IBOutlet weak var postTitle: UILabel!
-    @IBOutlet weak var postAuthor: UILabel!
-    
+    @IBOutlet weak var favIcon: UIImageView!
 }

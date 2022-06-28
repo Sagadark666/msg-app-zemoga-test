@@ -36,7 +36,18 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let post = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCellCT
         
         post.postTitle.text = posts[indexPath.row].title
-        post.postAuthor.text = String(posts[indexPath.row].id)
+        post.favIcon.image = UIImage(named: "star-off")
+        
+        post.contentView.layer.cornerRadius = 4.0
+        post.contentView.layer.borderWidth = 1.0
+        post.contentView.layer.borderColor = UIColor.clear.cgColor
+        post.contentView.layer.masksToBounds = false
+        post.layer.shadowColor = UIColor.gray.cgColor
+        post.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        post.layer.shadowRadius = 4.0
+        post.layer.shadowOpacity = 1.0
+        post.layer.masksToBounds = false
+        post.layer.shadowPath = UIBezierPath(roundedRect: post.bounds, cornerRadius: post.contentView.layer.cornerRadius).cgPath
         
         return post
     }
