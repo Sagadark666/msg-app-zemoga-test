@@ -7,12 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
       
     let api = ApiController()
     var posts = [Post]()
     
+    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    //var delegate : PostOpenDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is PostDetailsVC {
+            let postDetailVC = segue.destination as? PostDetailsVC
+            let postCard = sender as! PostCellCT
+            postDetailVC?.postId = postCard.postId
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return posts.count
@@ -35,6 +45,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let post = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCellCT
         
+        post.postId = posts[indexPath.row].id
         post.postTitle.text = posts[indexPath.row].title
         post.favIcon.image = UIImage(named: "star-off")
         
@@ -51,6 +62,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         return post
     }
+    
+    
     
     func reloadPost(){
         collectionView.reloadData()

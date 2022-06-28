@@ -60,7 +60,7 @@
                                         <connections>
                                             <outlet property="favIcon" destination="wgE-IZ-ddT" id="7Ev-2W-eL8"/>
                                             <outlet property="postTitle" destination="pbM-vk-U4G" id="tsv-rV-0jf"/>
-                                            <segue destination="8ex-Qi-rKS" kind="show" id="DbQ-tY-iRn"/>
+                                            <segue destination="8ex-Qi-rKS" kind="show" identifier="loadPost" id="DbQ-tY-iRn"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

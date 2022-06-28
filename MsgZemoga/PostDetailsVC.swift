@@ -9,8 +9,6 @@ import UIKit
 
 class PostDetailsVC : UIViewController {
     
-    
-    
     @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var detailDescription: UILabel!
     @IBOutlet weak var authorName: UILabel!
@@ -19,14 +17,31 @@ class PostDetailsVC : UIViewController {
     @IBOutlet weak var authorWebsite: UILabel!
     
     @IBOutlet weak var commentsCollectionView: UICollectionView!
+
+    //var post = PostDetail(userId: 0, title: "", body: "")
+    var postId : Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        ApiControllerTwo.fetchPosts{
-            [weak self] (posts) in
-            self?.posts = posts
+        ApiControllerTwo().fetchPosts(postId: postId){
+            [weak self] (post) in
+
+            DispatchQueue.main.async {
+                self?.detailTitle.text = post.title
+                self?.detailDescription.text = post.body
+            }
+            	
         }
-        
     }
+    
+
+    
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loadPost"{
+            guard let postsVC = segue.source as?
+                    ViewController else {return}
+            postsVC.delegate = self
+            
+        }
+    }*/
 }

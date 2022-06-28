@@ -20,6 +20,12 @@
 		9944832F2868B7C1000D16CF /* MsgZemogaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944832E2868B7C1000D16CF /* MsgZemogaUITestsLaunchTests.swift */; };
 		99AE377D2868CED200DAAF31 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE377C2868CED200DAAF31 /* Post.swift */; };
 		99AE377F2868D0F000DAAF31 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE377E2868D0F000DAAF31 /* ApiController.swift */; };
+		99DD89FE286B95C10099D82A /* ApiControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD89FD286B95C10099D82A /* ApiControllerTwo.swift */; };
+		99DD8A03286B95EF0099D82A /* PostDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */; };
+		99DD8A04286B95EF0099D82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99DD8A00286B95EF0099D82A /* Assets.xcassets */; };
+		99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A01286B95EF0099D82A /* PostDetails.swift */; };
+		99DD8A06286B95EF0099D82A /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 99DD8A02286B95EF0099D82A /* Base.lproj */; };
+		99DD8A08286BA4330099D82A /* PostOpenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A07286BA4330099D82A /* PostOpenDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +63,12 @@
 		9944832E2868B7C1000D16CF /* MsgZemogaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgZemogaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		99AE377C2868CED200DAAF31 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		99AE377E2868D0F000DAAF31 /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
+		99DD89FD286B95C10099D82A /* ApiControllerTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiControllerTwo.swift; sourceTree = "<group>"; };
+		99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsVC.swift; sourceTree = "<group>"; };
+		99DD8A00286B95EF0099D82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		99DD8A01286B95EF0099D82A /* PostDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetails.swift; sourceTree = "<group>"; };
+		99DD8A02286B95EF0099D82A /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
+		99DD8A07286BA4330099D82A /* PostOpenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOpenDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,11 @@
 		994483072868B7C0000D16CF /* MsgZemoga */ = {
 			isa = PBXGroup;
 			children = (
+				99DD8A00286B95EF0099D82A /* Assets.xcassets */,
+				99DD8A02286B95EF0099D82A /* Base.lproj */,
+				99DD8A01286B95EF0099D82A /* PostDetails.swift */,
+				99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */,
+				99DD89FD286B95C10099D82A /* ApiControllerTwo.swift */,
 				994483082868B7C0000D16CF /* AppDelegate.swift */,
 				9944830A2868B7C0000D16CF /* SceneDelegate.swift */,
 				9944830C2868B7C0000D16CF /* ViewController.swift */,
@@ -118,6 +135,7 @@
 				99AE377C2868CED200DAAF31 /* Post.swift */,
 				99AE377E2868D0F000DAAF31 /* ApiController.swift */,
 				992F293C286A5A97003F322C /* PostCellCT.swift */,
+				99DD8A07286BA4330099D82A /* PostOpenDelegate.swift */,
 			);
 			path = MsgZemoga;
 			sourceTree = "<group>";
@@ -244,6 +262,8 @@
 			files = (
 				994483182868B7C1000D16CF /* LaunchScreen.storyboard in Resources */,
 				994483152868B7C1000D16CF /* Assets.xcassets in Resources */,
+				99DD8A06286B95EF0099D82A /* Base.lproj in Resources */,
+				99DD8A04286B95EF0099D82A /* Assets.xcassets in Resources */,
 				994483102868B7C0000D16CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,11 +290,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				992F293D286A5A97003F322C /* PostCellCT.swift in Sources */,
+				99DD89FE286B95C10099D82A /* ApiControllerTwo.swift in Sources */,
+				99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */,
+				99DD8A08286BA4330099D82A /* PostOpenDelegate.swift in Sources */,
 				994483132868B7C0000D16CF /* MsgZemoga.xcdatamodeld in Sources */,
 				9944830D2868B7C0000D16CF /* ViewController.swift in Sources */,
 				99AE377F2868D0F000DAAF31 /* ApiController.swift in Sources */,
 				994483092868B7C0000D16CF /* AppDelegate.swift in Sources */,
 				99AE377D2868CED200DAAF31 /* Post.swift in Sources */,
+				99DD8A03286B95EF0099D82A /* PostDetailsVC.swift in Sources */,
 				9944830B2868B7C0000D16CF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

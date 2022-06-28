@@ -31,10 +31,6 @@ class ApiController {
             // Parse JSON data
             if let data = data {
                 completionHandler(self.parseJsonData(data: data))
-                // Reload table view
-                //OperationQueue.main.addOperation({
-                //self.tableView.reloadData()
-                //})
             }
         
         })
