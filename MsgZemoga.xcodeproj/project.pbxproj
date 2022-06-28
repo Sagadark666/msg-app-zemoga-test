@@ -18,7 +18,6 @@
 		994483232868B7C1000D16CF /* MsgZemogaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994483222868B7C1000D16CF /* MsgZemogaTests.swift */; };
 		9944832D2868B7C1000D16CF /* MsgZemogaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944832C2868B7C1000D16CF /* MsgZemogaUITests.swift */; };
 		9944832F2868B7C1000D16CF /* MsgZemogaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944832E2868B7C1000D16CF /* MsgZemogaUITestsLaunchTests.swift */; };
-		994483422868C693000D16CF /* PostVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 994483412868C693000D16CF /* PostVC.xib */; };
 		99AE377D2868CED200DAAF31 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE377C2868CED200DAAF31 /* Post.swift */; };
 		99AE377F2868D0F000DAAF31 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE377E2868D0F000DAAF31 /* ApiController.swift */; };
 /* End PBXBuildFile section */
@@ -56,7 +55,6 @@
 		994483282868B7C1000D16CF /* MsgZemogaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MsgZemogaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9944832C2868B7C1000D16CF /* MsgZemogaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgZemogaUITests.swift; sourceTree = "<group>"; };
 		9944832E2868B7C1000D16CF /* MsgZemogaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgZemogaUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		994483412868C693000D16CF /* PostVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostVC.xib; sourceTree = "<group>"; };
 		99AE377C2868CED200DAAF31 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		99AE377E2868D0F000DAAF31 /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,7 +115,6 @@
 				994483162868B7C1000D16CF /* LaunchScreen.storyboard */,
 				994483192868B7C1000D16CF /* Info.plist */,
 				994483112868B7C0000D16CF /* MsgZemoga.xcdatamodeld */,
-				994483412868C693000D16CF /* PostVC.xib */,
 				99AE377C2868CED200DAAF31 /* Post.swift */,
 				99AE377E2868D0F000DAAF31 /* ApiController.swift */,
 				992F293C286A5A97003F322C /* PostCellCT.swift */,
@@ -222,7 +219,7 @@
 				};
 			};
 			buildConfigurationList = 994483002868B7C0000D16CF /* Build configuration list for PBXProject "MsgZemoga" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -248,7 +245,6 @@
 			files = (
 				994483182868B7C1000D16CF /* LaunchScreen.storyboard in Resources */,
 				994483152868B7C1000D16CF /* Assets.xcassets in Resources */,
-				994483422868C693000D16CF /* PostVC.xib in Resources */,
 				994483102868B7C0000D16CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
