@@ -19,10 +19,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBAction func reloadWasPressed(sender: UIBarButtonItem){
         api.fetchPosts{
             [weak self] (posts) in
-            self?.posts = posts
-            
-            DispatchQueue.main.async {
-                self?.reloadPost()
+            if (posts.count - self!.posts.count) > 0 {
+                if self!.posts.isEmpty {
+                    self?.posts = posts
+                } else{
+                    for post in posts {
+                        let results = self!.posts.filter { $0.id == post.id }
+                        if results.isEmpty {
+                            self!.posts.insert(post, at: 0)
+                        }
+                    }
+                }
+                DispatchQueue.main.async {
+                    self?.reloadPost()
+                }
             }
         }
     }
@@ -82,8 +92,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         } else{
             post.favIcon.image = UIImage(named: "star-off")
         }
-        
-        
+    
         post.contentView.layer.cornerRadius = 4.0
         post.contentView.layer.borderWidth = 1.0
         post.contentView.layer.borderColor = UIColor.clear.cgColor
@@ -118,3 +127,4 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     
 }
+
