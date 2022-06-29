@@ -15,6 +15,23 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBAction func reloadWasPressed(sender: UIBarButtonItem){
+        api.fetchPosts{
+            [weak self] (posts) in
+            self?.posts = posts
+            
+            DispatchQueue.main.async {
+                self?.reloadPost()
+            }
+        }
+    }
+    
+    @IBAction func deleteAllWasPressed(sender: UIBarButtonItem){
+        posts.removeAll()
+        reloadPost()
+    }
+    
+    
     //var delegate : PostOpenDelegate? = nil
     
     override func viewDidLoad() {

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Posts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MsgZemoga" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,13 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tyA-RH-RtI">
-                                <rect key="frame" x="0.0" y="17" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="New Posts" id="ePR-FI-x1r"/>
-                                </items>
-                            </navigationBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eGq-tJ-bqq">
                                 <rect key="frame" x="16" y="70" width="343" height="597"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -73,7 +66,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="We6-WF-zBc"/>
+                    <navigationItem key="navigationItem" title="Posts" id="We6-WF-zBc">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="refresh" id="vpy-vO-Rog">
+                                <connections>
+                                    <action selector="reloadWasPressedWithSender:" destination="BYZ-38-t0r" id="L3f-IA-dSA"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="GGc-2n-Jf8">
+                                <connections>
+                                    <action selector="deleteAllWasPressedWithSender:" destination="BYZ-38-t0r" id="sN4-Ba-LYl"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="eGq-tJ-bqq" id="UtB-zd-XgD"/>
                     </connections>
@@ -148,21 +154,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bVR-uU-wAt">
-                                <rect key="frame" x="16" y="415" width="343" height="252"/>
+                                <rect key="frame" x="16" y="415" width="343" height="310"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iQO-uf-Ii3">
-                                    <size key="itemSize" width="343" height="111"/>
+                                    <size key="itemSize" width="343" height="125"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CommentCell" id="aI2-bC-Uag" customClass="CommentCellCT" customModule="MsgZemoga" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="10" width="343" height="111"/>
+                                        <rect key="frame" x="0.0" y="10" width="343" height="125"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="W5g-Df-5Q5">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="111"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="125"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="quo vero reiciendis velit similique earum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8b-4C-tSs">
@@ -172,10 +178,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUj-SI-EvG">
-                                                    <rect key="frame" x="8" y="37" width="327" height="67"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUj-SI-EvG">
+                                                    <rect key="frame" x="8" y="37" width="327" height="79"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <string key="text">est natus enim nihil est dolore omnis voluptatem numquam\net omnis occaecati quod ullam at\nvoluptatem error expedita pariatur\nnihil sint nostrum voluptatem reiciendis et</string>
+                                                    <string key="text">doloribus at sed quis culpa deserunt consectetur qui praesentium\naccusamus fugiat dicta\nvoluptatem rerum ut voluptate autem\nvoluptatem repellendus aspernatur dolorem in</string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -183,7 +189,7 @@
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" red="0.98186905690000004" green="0.98640179269999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <size key="customSize" width="343" height="111"/>
+                                        <size key="customSize" width="343" height="125"/>
                                         <connections>
                                             <outlet property="bodyComment" destination="bUj-SI-EvG" id="xZX-yT-CQf"/>
                                             <outlet property="emailComment" destination="h8b-4C-tSs" id="2wV-dq-g2t"/>
@@ -199,7 +205,12 @@
                         <viewLayoutGuide key="safeArea" id="kPY-G8-FCz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7ll-ee-avD"/>
+                    <navigationItem key="navigationItem" id="7ll-ee-avD">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="bookmarks" id="7fi-po-Y2Y"/>
+                            <barButtonItem systemItem="trash" id="twQ-3X-co3"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="authorEmail" destination="TDa-SX-PMC" id="5zb-cn-lKD"/>
                         <outlet property="authorName" destination="6oR-8g-zoQ" id="owx-j5-lLh"/>
