@@ -23,6 +23,11 @@ class PostDetailsVC : UIViewController, UICollectionViewDataSource, UICollection
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func addToFavorites(sender: UIBarButtonItem){
+        delegate?.setFavorite(postId: arrayPosition)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     var postId : Int!
     var userId : Int!
     var arrayPosition : Int!

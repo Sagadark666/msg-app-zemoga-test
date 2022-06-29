@@ -75,7 +75,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         post.arrayPosition = indexPath.row
         
         post.postTitle.text = posts[indexPath.row].title
-        post.favIcon.image = UIImage(named: "star-off")
+        if posts[indexPath.row].isFavorite {
+            post.favIcon.image = UIImage(named: "star-on")
+        } else{
+            post.favIcon.image = UIImage(named: "star-off")
+        }
+        
         
         post.contentView.layer.cornerRadius = 4.0
         post.contentView.layer.borderWidth = 1.0
@@ -103,7 +108,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func setFavorite(postId: Int) {
-        print(postId)
+        posts[postId].isFavorite = !posts[postId].isFavorite
+        reloadPost()
     }
     
 

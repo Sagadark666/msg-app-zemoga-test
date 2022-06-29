@@ -13,7 +13,6 @@
 		9944830B2868B7C0000D16CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944830A2868B7C0000D16CF /* SceneDelegate.swift */; };
 		9944830D2868B7C0000D16CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944830C2868B7C0000D16CF /* ViewController.swift */; };
 		994483102868B7C0000D16CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944830E2868B7C0000D16CF /* Main.storyboard */; };
-		994483132868B7C0000D16CF /* MsgZemoga.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 994483112868B7C0000D16CF /* MsgZemoga.xcdatamodeld */; };
 		994483152868B7C1000D16CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994483142868B7C1000D16CF /* Assets.xcassets */; };
 		994483182868B7C1000D16CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994483162868B7C1000D16CF /* LaunchScreen.storyboard */; };
 		994483232868B7C1000D16CF /* MsgZemogaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994483222868B7C1000D16CF /* MsgZemogaTests.swift */; };
@@ -28,7 +27,6 @@
 		99DD8A03286B95EF0099D82A /* PostDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */; };
 		99DD8A04286B95EF0099D82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99DD8A00286B95EF0099D82A /* Assets.xcassets */; };
 		99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A01286B95EF0099D82A /* PostDetails.swift */; };
-		99DD8A06286B95EF0099D82A /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 99DD8A02286B95EF0099D82A /* Base.lproj */; };
 		99DD8A08286BA4330099D82A /* PostOpenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A07286BA4330099D82A /* PostOpenDelegate.swift */; };
 		99DD8A0A286BB64A0099D82A /* ApiControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A09286BB64A0099D82A /* ApiControllerThree.swift */; };
 		99DD8A0C286BB7720099D82A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A0B286BB7720099D82A /* User.swift */; };
@@ -59,7 +57,6 @@
 		9944830A2868B7C0000D16CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9944830C2868B7C0000D16CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9944830F2868B7C0000D16CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		994483122868B7C0000D16CF /* MsgZemoga.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MsgZemoga.xcdatamodel; sourceTree = "<group>"; };
 		994483142868B7C1000D16CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		994483172868B7C1000D16CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		994483192868B7C1000D16CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,7 +74,6 @@
 		99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsVC.swift; sourceTree = "<group>"; };
 		99DD8A00286B95EF0099D82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99DD8A01286B95EF0099D82A /* PostDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetails.swift; sourceTree = "<group>"; };
-		99DD8A02286B95EF0099D82A /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		99DD8A07286BA4330099D82A /* PostOpenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOpenDelegate.swift; sourceTree = "<group>"; };
 		99DD8A09286BB64A0099D82A /* ApiControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiControllerThree.swift; sourceTree = "<group>"; };
 		99DD8A0B286BB7720099D82A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -132,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				99DD8A00286B95EF0099D82A /* Assets.xcassets */,
-				99DD8A02286B95EF0099D82A /* Base.lproj */,
 				99DD8A01286B95EF0099D82A /* PostDetails.swift */,
 				99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */,
 				99DD89FD286B95C10099D82A /* ApiControllerTwo.swift */,
@@ -143,7 +138,6 @@
 				994483142868B7C1000D16CF /* Assets.xcassets */,
 				994483162868B7C1000D16CF /* LaunchScreen.storyboard */,
 				994483192868B7C1000D16CF /* Info.plist */,
-				994483112868B7C0000D16CF /* MsgZemoga.xcdatamodeld */,
 				99AE377C2868CED200DAAF31 /* Post.swift */,
 				99AE377E2868D0F000DAAF31 /* ApiController.swift */,
 				992F293C286A5A97003F322C /* PostCellCT.swift */,
@@ -280,7 +274,6 @@
 			files = (
 				994483182868B7C1000D16CF /* LaunchScreen.storyboard in Resources */,
 				994483152868B7C1000D16CF /* Assets.xcassets in Resources */,
-				99DD8A06286B95EF0099D82A /* Base.lproj in Resources */,
 				99DD8A04286B95EF0099D82A /* Assets.xcassets in Resources */,
 				994483102868B7C0000D16CF /* Main.storyboard in Resources */,
 			);
@@ -313,7 +306,6 @@
 				99DD89FE286B95C10099D82A /* ApiControllerTwo.swift in Sources */,
 				99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */,
 				99DD8A08286BA4330099D82A /* PostOpenDelegate.swift in Sources */,
-				994483132868B7C0000D16CF /* MsgZemoga.xcdatamodeld in Sources */,
 				99DD8A0A286BB64A0099D82A /* ApiControllerThree.swift in Sources */,
 				9944830D2868B7C0000D16CF /* ViewController.swift in Sources */,
 				998175FE286BD148006806ED /* CommentCellCT.swift in Sources */,
@@ -661,19 +653,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		994483112868B7C0000D16CF /* MsgZemoga.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				994483122868B7C0000D16CF /* MsgZemoga.xcdatamodel */,
-			);
-			currentVersion = 994483122868B7C0000D16CF /* MsgZemoga.xcdatamodel */;
-			path = MsgZemoga.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 994482FD2868B7C0000D16CF /* Project object */;
 }

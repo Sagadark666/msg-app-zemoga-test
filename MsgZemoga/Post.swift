@@ -13,5 +13,10 @@ struct Post : Codable{
     var id: Int
     var userId : Int
     var title : String
+    var isFavorite : Bool = false
+    
+    private enum CodingKeys: String, CodingKey {
+            case id, userId, title
+        }
     
 }	

@@ -207,7 +207,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="7ll-ee-avD">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="bookmarks" id="7fi-po-Y2Y"/>
+                            <barButtonItem systemItem="bookmarks" id="7fi-po-Y2Y">
+                                <connections>
+                                    <action selector="addToFavoritesWithSender:" destination="8ex-Qi-rKS" id="CGj-Tk-I8d"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem systemItem="trash" id="twQ-3X-co3">
                                 <connections>
                                     <action selector="deletePostWithSender:" destination="8ex-Qi-rKS" id="Vz9-e7-BQl"/>
