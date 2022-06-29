@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Post : Codable{
+public class Post : Codable{
 
     var id: Int
     var userId : Int

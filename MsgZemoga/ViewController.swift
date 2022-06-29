@@ -6,30 +6,57 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, ManagePostDelegate{
     
       
     let api = ApiController()
-    var posts = [Post]()
+    //var posts = [Post]()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var cachedPost = [PostEntity]()
+    //var cachedPost = PostEntity()
     
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBAction func reloadWasPressed(sender: UIBarButtonItem){
+        print("reload was pressed")
+        print(cachedPost.count)
         api.fetchPosts{
             [weak self] (posts) in
-            if (posts.count - self!.posts.count) > 0 {
-                if self!.posts.isEmpty {
-                    self?.posts = posts
+            if (posts.count - self!.cachedPost.count) > 0 {
+                if self!.cachedPost.isEmpty {
+                    for post in posts {
+                        let cachePost = PostEntity(context: self!.context)
+                        cachePost.id = Int64(post.id)
+                        cachePost.userId = Int64(post.userId)
+                        cachePost.title = post.title
+                        cachePost.isFavorite = post.isFavorite
+                        
+                        self?.cachedPost.append(cachePost)
+                    }
                 } else{
                     for post in posts {
-                        let results = self!.posts.filter { $0.id == post.id }
+                        let results = self!.cachedPost.filter { $0.id == post.id }
                         if results.isEmpty {
-                            self!.posts.insert(post, at: 0)
+                            let cachePost = PostEntity(context: self!.context)
+                            cachePost.id = Int64(post.id)
+                            cachePost.userId = Int64(post.userId)
+                            cachePost.title = post.title
+                            cachePost.isFavorite = post.isFavorite
+                            self!.cachedPost.insert(cachePost, at: 0)
                         }
                     }
                 }
+                print("Hay : \(self!.cachedPost.count) elementos")
+                do{
+                    try self!.context.save()
+                } catch{
+                    print("Se esta rompiendo al refrescar")
+                }
+                print("Hay : \(self!.cachedPost.count) elementos")
+                
                 DispatchQueue.main.async {
                     self?.reloadPost()
                 }
@@ -38,7 +65,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     @IBAction func deleteAllWasPressed(sender: UIBarButtonItem){
-        posts.removeAll()
+        for cachePost in cachedPost {
+            context.delete(cachePost)
+        }
+        cachedPost.removeAll()
+        do{
+            try self.context.save()
+        } catch{
+            print("Se esta rompiendo al eliminar todo")
+        }
         reloadPost()
     }
     
@@ -47,14 +82,42 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        api.fetchPosts{
-            [weak self] (posts) in
-            self?.posts = posts
+        
+        cachedPost = fetchCachedData()
+        if cachedPost.isEmpty{
+            api.fetchPosts{
+                [weak self] (posts) in
             
-            DispatchQueue.main.async {
-                self?.reloadPost()
+                for post in posts {
+                    let cachePost = PostEntity(context: self!.context)
+                    cachePost.id = Int64(post.id)
+                    cachePost.userId = Int64(post.userId)
+                    cachePost.title = post.title
+                    cachePost.isFavorite = post.isFavorite
+                    do{
+                        try self!.context.save()
+                    }catch{
+                        print("Se esta rompiendo al inicializar")
+                    }
+                }
+                DispatchQueue.main.async {
+                    self?.reloadPost()
+                }
             }
         }
+        DispatchQueue.main.async {
+            self.reloadPost()
+        }
+    }
+    
+    func fetchCachedData() -> [PostEntity]{
+        var requestPost = [PostEntity]()
+        do{
+            requestPost = try context.fetch(PostEntity.fetchRequest())
+        } catch{
+            print("Se esta rompiendo al recuperar")
+        }
+        return requestPost
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -74,20 +137,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return posts.count
+        return cachedPost.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let post = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCellCT
         
-        post.postId = posts[indexPath.row].id
-        post.userId = posts[indexPath.row].userId
+        post.postId = Int(cachedPost[indexPath.row].id)
+        post.userId = Int(cachedPost[indexPath.row].userId)
         post.arrayPosition = indexPath.row
         
-        post.postTitle.text = posts[indexPath.row].title
-        post.isFavorite = posts[indexPath.row].isFavorite
-        if posts[indexPath.row].isFavorite {
+        post.postTitle.text = cachedPost[indexPath.row].title
+        post.isFavorite = cachedPost[indexPath.row].isFavorite
+        
+        if cachedPost[indexPath.row].isFavorite {
             post.favIcon.image = UIImage(named: "star-on")
         } else{
             post.favIcon.image = UIImage(named: "star-off")
@@ -110,17 +174,28 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     
     func reloadPost(){
-        posts.sort{$0.isFavorite && !$1.isFavorite}
+        cachedPost.sort{$0.isFavorite && !$1.isFavorite}
         collectionView.reloadData()
     }
     
     func setDelete(postId: Int) {
-        posts.remove(at: postId)
+        context.delete(cachedPost[postId])
+        cachedPost.remove(at: postId)
+        do {
+            try context.save()
+        }catch{
+            print("Se esta rompiendo al eliminar")
+        }
         reloadPost()
     }
     
     func setFavorite(postId: Int) {
-        posts[postId].isFavorite = !posts[postId].isFavorite
+        cachedPost[postId].isFavorite = !cachedPost[postId].isFavorite
+        do {
+            try context.save()
+        }catch{
+            print("Se esta rompiendo al agregar favorito")
+        }
         reloadPost()
     }
     
