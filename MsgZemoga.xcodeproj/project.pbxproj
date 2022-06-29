@@ -18,6 +18,9 @@
 		994483232868B7C1000D16CF /* MsgZemogaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994483222868B7C1000D16CF /* MsgZemogaTests.swift */; };
 		9944832D2868B7C1000D16CF /* MsgZemogaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944832C2868B7C1000D16CF /* MsgZemogaUITests.swift */; };
 		9944832F2868B7C1000D16CF /* MsgZemogaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944832E2868B7C1000D16CF /* MsgZemogaUITestsLaunchTests.swift */; };
+		998175FA286BCFB9006806ED /* ApiControllerFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998175F9286BCFB9006806ED /* ApiControllerFour.swift */; };
+		998175FC286BD044006806ED /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998175FB286BD044006806ED /* Comment.swift */; };
+		998175FE286BD148006806ED /* CommentCellCT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998175FD286BD148006806ED /* CommentCellCT.swift */; };
 		99AE377D2868CED200DAAF31 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE377C2868CED200DAAF31 /* Post.swift */; };
 		99AE377F2868D0F000DAAF31 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE377E2868D0F000DAAF31 /* ApiController.swift */; };
 		99DD89FE286B95C10099D82A /* ApiControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD89FD286B95C10099D82A /* ApiControllerTwo.swift */; };
@@ -63,6 +66,9 @@
 		994483282868B7C1000D16CF /* MsgZemogaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MsgZemogaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9944832C2868B7C1000D16CF /* MsgZemogaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgZemogaUITests.swift; sourceTree = "<group>"; };
 		9944832E2868B7C1000D16CF /* MsgZemogaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgZemogaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		998175F9286BCFB9006806ED /* ApiControllerFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiControllerFour.swift; sourceTree = "<group>"; };
+		998175FB286BD044006806ED /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		998175FD286BD148006806ED /* CommentCellCT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellCT.swift; sourceTree = "<group>"; };
 		99AE377C2868CED200DAAF31 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		99AE377E2868D0F000DAAF31 /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		99DD89FD286B95C10099D82A /* ApiControllerTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiControllerTwo.swift; sourceTree = "<group>"; };
@@ -142,6 +148,9 @@
 				99DD8A07286BA4330099D82A /* PostOpenDelegate.swift */,
 				99DD8A09286BB64A0099D82A /* ApiControllerThree.swift */,
 				99DD8A0B286BB7720099D82A /* User.swift */,
+				998175F9286BCFB9006806ED /* ApiControllerFour.swift */,
+				998175FB286BD044006806ED /* Comment.swift */,
+				998175FD286BD148006806ED /* CommentCellCT.swift */,
 			);
 			path = MsgZemoga;
 			sourceTree = "<group>";
@@ -303,10 +312,13 @@
 				994483132868B7C0000D16CF /* MsgZemoga.xcdatamodeld in Sources */,
 				99DD8A0A286BB64A0099D82A /* ApiControllerThree.swift in Sources */,
 				9944830D2868B7C0000D16CF /* ViewController.swift in Sources */,
+				998175FE286BD148006806ED /* CommentCellCT.swift in Sources */,
 				99AE377F2868D0F000DAAF31 /* ApiController.swift in Sources */,
 				994483092868B7C0000D16CF /* AppDelegate.swift in Sources */,
+				998175FC286BD044006806ED /* Comment.swift in Sources */,
 				99AE377D2868CED200DAAF31 /* Post.swift in Sources */,
 				99DD8A03286B95EF0099D82A /* PostDetailsVC.swift in Sources */,
+				998175FA286BCFB9006806ED /* ApiControllerFour.swift in Sources */,
 				9944830B2868B7C0000D16CF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

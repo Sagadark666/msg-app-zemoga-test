@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostDetailsVC : UIViewController {
+class PostDetailsVC : UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var detailDescription: UILabel!
@@ -20,6 +20,7 @@ class PostDetailsVC : UIViewController {
     
     var postId : Int!
     var userId : Int!
+    var comments = [Comment]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,49 @@ class PostDetailsVC : UIViewController {
             }
         }
         
+        ApiControllerFour().fetchPosts(postId: postId){
+            [weak self] (comments) in
+            self?.comments = comments
+            
+            DispatchQueue.main.async {
+                self?.reloadPost()
+            }
+        }
+        
+        
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return comments.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let comment = collectionView.dequeueReusableCell(withReuseIdentifier: "CommentCell", for: indexPath) as! CommentCellCT
+        
+        comment.emailComment.text = comments[indexPath.row].email
+        comment.bodyComment.text = comments[indexPath.row].body
+        
+        comment.contentView.layer.cornerRadius = 4.0
+        comment.contentView.layer.borderWidth = 1.0
+        comment.contentView.layer.borderColor = UIColor.clear.cgColor
+        comment.contentView.layer.masksToBounds = false
+        comment.layer.shadowColor = UIColor.gray.cgColor
+        comment.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        comment.layer.shadowRadius = 4.0
+        comment.layer.shadowOpacity = 1.0
+        comment.layer.masksToBounds = false
+        comment.layer.shadowPath = UIBezierPath(roundedRect: comment.bounds, cornerRadius: comment.contentView.layer.cornerRadius).cgPath
+        
+        return comment
+    }
+    
+    
+    
+    func reloadPost(){
+        commentsCollectionView.reloadData()
+    }
+
 
     
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
