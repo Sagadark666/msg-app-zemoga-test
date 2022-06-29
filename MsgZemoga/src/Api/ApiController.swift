@@ -9,47 +9,34 @@ import Foundation
 
 class ApiController {
 
-    let endpoint = URL(string: "https://jsonplaceholder.typicode.com/posts")
-    //var posts =  [Post]()
+    private let request = "https://jsonplaceholder.typicode.com/"
+    private let requestHandler = RequestHandler()
     
-    func fetchPosts(completionHandler: @escaping ([Post]) -> Void){
-        
-        let request = URLRequest(url: endpoint!)
-        let getData = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
-            
-            if let error = error {
-                print(error)
-                return
-            }
-            
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode) else {
-                print("Error with the response, unexpected status code: \(response)")
-                return
-            }
-            
-            // Parse JSON data
-            if let data = data {
-                completionHandler(self.parseJsonData(data: data))
-            }
-        
-        })
-        getData.resume()
-        
+    func getAllPosts(completionHandler: @escaping ([Post]) -> Void){
+        let endpoint = "\(request)posts"
+        requestHandler.sendRequest(request: endpoint, of: [Post].self) {posts in
+            completionHandler(posts)
+        }
     }
     
-    func parseJsonData(data: Data) -> [Post]{
-        let decoder = JSONDecoder()
-        
-        var posts = [Post]()
-         
-            do {
-                posts = try decoder.decode([Post].self, from: data)
-         
-            } catch {
-                print(error)
-            }
-         
-            return posts
+    func getPostDetails(postId: Int, completionHandler: @escaping (PostDetail) -> Void){
+        let endpoint = "\(request)posts/\(postId)"
+        requestHandler.sendRequest(request: endpoint, of: PostDetail.self) {postDetail in
+            completionHandler(postDetail)
+        }
+    }
+    
+    func getUserInfo(userId: Int, completionHandler: @escaping (User) -> Void){
+        let endpoint = "\(request)users/\(userId)"
+        requestHandler.sendRequest(request: endpoint, of: User.self) {user in
+            completionHandler(user)
+        }
+    }
+    
+    func getAllComments(postId: Int, completionHandler: @escaping ([Comment]) -> Void){
+        let endpoint = "\(request)comments?postId=\(postId)"
+        requestHandler.sendRequest(request: endpoint, of: [Comment].self) {comments in
+            completionHandler(comments)
+        }
     }
 }

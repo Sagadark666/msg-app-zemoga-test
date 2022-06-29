@@ -31,6 +31,7 @@ class PostDetailsVC : UIViewController, UICollectionViewDataSource, UICollection
         self.navigationController?.popViewController(animated: true)
     }
     
+    var api = ApiController()
     var postId : Int!
     var userId : Int!
     var isFavorite : Bool!
@@ -46,7 +47,7 @@ class PostDetailsVC : UIViewController, UICollectionViewDataSource, UICollection
             FavButton.image = UIImage(systemName: "star.fill")
         }
     
-        ApiControllerTwo().fetchPosts(postId: postId){
+        api.getPostDetails(postId: postId){
             [weak self] (post) in
             
             DispatchQueue.main.async {
@@ -55,7 +56,7 @@ class PostDetailsVC : UIViewController, UICollectionViewDataSource, UICollection
             }
         }
         
-        ApiControllerThree().fetchPosts(userId: userId){
+        api.getUserInfo(userId: userId){
             [weak self] (user) in
             
             DispatchQueue.main.async {  
@@ -66,7 +67,7 @@ class PostDetailsVC : UIViewController, UICollectionViewDataSource, UICollection
             }
         }
         
-        ApiControllerFour().fetchPosts(postId: postId){
+        api.getAllComments(postId: postId){
             [weak self] (comments) in
             self?.comments = comments
             

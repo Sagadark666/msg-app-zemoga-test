@@ -21,9 +21,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBAction func reloadWasPressed(sender: UIBarButtonItem){
-        print("reload was pressed")
-        print(cachedPost.count)
-        api.fetchPosts{
+        api.getAllPosts{
             [weak self] (posts) in
             if (posts.count - self!.cachedPost.count) > 0 {
                 if self!.cachedPost.isEmpty {
@@ -49,14 +47,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                         }
                     }
                 }
-                print("Hay : \(self!.cachedPost.count) elementos")
                 do{
                     try self!.context.save()
                 } catch{
                     print("Se esta rompiendo al refrescar")
-                }
-                print("Hay : \(self!.cachedPost.count) elementos")
-                
+                }                
                 DispatchQueue.main.async {
                     self?.reloadPost()
                 }
@@ -76,16 +71,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         reloadPost()
     }
-    
-    
-    //var delegate : PostOpenDelegate? = nil
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         cachedPost = fetchCachedData()
         if cachedPost.isEmpty{
-            api.fetchPosts{
+            api.getAllPosts{
                 [weak self] (posts) in
             
                 for post in posts {
