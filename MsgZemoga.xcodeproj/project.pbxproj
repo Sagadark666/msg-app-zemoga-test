@@ -17,6 +17,7 @@
 		994483232868B7C1000D16CF /* MsgZemogaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994483222868B7C1000D16CF /* MsgZemogaTests.swift */; };
 		9944832D2868B7C1000D16CF /* MsgZemogaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944832C2868B7C1000D16CF /* MsgZemogaUITests.swift */; };
 		9944832F2868B7C1000D16CF /* MsgZemogaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944832E2868B7C1000D16CF /* MsgZemogaUITestsLaunchTests.swift */; };
+		994A7247286C9EA8007AFB08 /* MsgZemoga.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 994A7245286C9EA8007AFB08 /* MsgZemoga.xcdatamodeld */; };
 		998175FA286BCFB9006806ED /* ApiControllerFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998175F9286BCFB9006806ED /* ApiControllerFour.swift */; };
 		998175FC286BD044006806ED /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998175FB286BD044006806ED /* Comment.swift */; };
 		998175FE286BD148006806ED /* CommentCellCT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998175FD286BD148006806ED /* CommentCellCT.swift */; };
@@ -61,6 +62,7 @@
 		994483282868B7C1000D16CF /* MsgZemogaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MsgZemogaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9944832C2868B7C1000D16CF /* MsgZemogaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgZemogaUITests.swift; sourceTree = "<group>"; };
 		9944832E2868B7C1000D16CF /* MsgZemogaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgZemogaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		994A7246286C9EA8007AFB08 /* MsgZemoga.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MsgZemoga.xcdatamodel; sourceTree = "<group>"; };
 		998175F9286BCFB9006806ED /* ApiControllerFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiControllerFour.swift; sourceTree = "<group>"; };
 		998175FB286BD044006806ED /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		998175FD286BD148006806ED /* CommentCellCT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellCT.swift; sourceTree = "<group>"; };
@@ -99,6 +101,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		993695CE286CCDE0000F0F34 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				9944830E2868B7C0000D16CF /* Main.storyboard */,
+				994483162868B7C1000D16CF /* LaunchScreen.storyboard */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		993695CF286CCE02000F0F34 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				993695D3286CCEA8000F0F34 /* Delegate */,
+				993695D2286CCE76000F0F34 /* Api */,
+				993695D1286CCE5A000F0F34 /* Controller */,
+				993695CE286CCDE0000F0F34 /* Layout */,
+				993695D0286CCE0B000F0F34 /* Model */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		993695D0286CCE0B000F0F34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				994A7245286C9EA8007AFB08 /* MsgZemoga.xcdatamodeld */,
+				99AE377C2868CED200DAAF31 /* Post.swift */,
+				99DD8A01286B95EF0099D82A /* PostDetails.swift */,
+				99DD8A0B286BB7720099D82A /* User.swift */,
+				998175FB286BD044006806ED /* Comment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		993695D1286CCE5A000F0F34 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				993695D4286CCEDA000F0F34 /* CollectionCellController */,
+				99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */,
+				9944830C2868B7C0000D16CF /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		993695D2286CCE76000F0F34 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				99DD89FD286B95C10099D82A /* ApiControllerTwo.swift */,
+				99AE377E2868D0F000DAAF31 /* ApiController.swift */,
+				99DD8A09286BB64A0099D82A /* ApiControllerThree.swift */,
+				998175F9286BCFB9006806ED /* ApiControllerFour.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		993695D3286CCEA8000F0F34 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				994483082868B7C0000D16CF /* AppDelegate.swift */,
+				9944830A2868B7C0000D16CF /* SceneDelegate.swift */,
+				9900382A286BE5C60014A1B4 /* ManagePostDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		993695D4286CCEDA000F0F34 /* CollectionCellController */ = {
+			isa = PBXGroup;
+			children = (
+				992F293C286A5A97003F322C /* PostCellCT.swift */,
+				998175FD286BD148006806ED /* CommentCellCT.swift */,
+			);
+			path = CollectionCellController;
+			sourceTree = "<group>";
+		};
 		994482FC2868B7C0000D16CF = {
 			isa = PBXGroup;
 			children = (
@@ -122,25 +197,9 @@
 		994483072868B7C0000D16CF /* MsgZemoga */ = {
 			isa = PBXGroup;
 			children = (
+				993695CF286CCE02000F0F34 /* src */,
 				99DD8A00286B95EF0099D82A /* Assets.xcassets */,
-				99DD8A01286B95EF0099D82A /* PostDetails.swift */,
-				99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */,
-				99DD89FD286B95C10099D82A /* ApiControllerTwo.swift */,
-				994483082868B7C0000D16CF /* AppDelegate.swift */,
-				9944830A2868B7C0000D16CF /* SceneDelegate.swift */,
-				9944830C2868B7C0000D16CF /* ViewController.swift */,
-				9944830E2868B7C0000D16CF /* Main.storyboard */,
-				994483162868B7C1000D16CF /* LaunchScreen.storyboard */,
 				994483192868B7C1000D16CF /* Info.plist */,
-				99AE377C2868CED200DAAF31 /* Post.swift */,
-				99AE377E2868D0F000DAAF31 /* ApiController.swift */,
-				992F293C286A5A97003F322C /* PostCellCT.swift */,
-				99DD8A09286BB64A0099D82A /* ApiControllerThree.swift */,
-				99DD8A0B286BB7720099D82A /* User.swift */,
-				998175F9286BCFB9006806ED /* ApiControllerFour.swift */,
-				998175FB286BD044006806ED /* Comment.swift */,
-				998175FD286BD148006806ED /* CommentCellCT.swift */,
-				9900382A286BE5C60014A1B4 /* ManagePostDelegate.swift */,
 			);
 			path = MsgZemoga;
 			sourceTree = "<group>";
@@ -299,6 +358,7 @@
 				99DD8A0A286BB64A0099D82A /* ApiControllerThree.swift in Sources */,
 				9944830D2868B7C0000D16CF /* ViewController.swift in Sources */,
 				998175FE286BD148006806ED /* CommentCellCT.swift in Sources */,
+				994A7247286C9EA8007AFB08 /* MsgZemoga.xcdatamodeld in Sources */,
 				99AE377F2868D0F000DAAF31 /* ApiController.swift in Sources */,
 				994483092868B7C0000D16CF /* AppDelegate.swift in Sources */,
 				998175FC286BD044006806ED /* Comment.swift in Sources */,
@@ -643,6 +703,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		994A7245286C9EA8007AFB08 /* MsgZemoga.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				994A7246286C9EA8007AFB08 /* MsgZemoga.xcdatamodel */,
+			);
+			currentVersion = 994A7246286C9EA8007AFB08 /* MsgZemoga.xcdatamodel */;
+			path = MsgZemoga.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 994482FD2868B7C0000D16CF /* Project object */;
 }
