@@ -13,7 +13,6 @@
 		9944830B2868B7C0000D16CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944830A2868B7C0000D16CF /* SceneDelegate.swift */; };
 		9944830D2868B7C0000D16CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944830C2868B7C0000D16CF /* ViewController.swift */; };
 		994483102868B7C0000D16CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944830E2868B7C0000D16CF /* Main.storyboard */; };
-		994483152868B7C1000D16CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 994483142868B7C1000D16CF /* Assets.xcassets */; };
 		994483182868B7C1000D16CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994483162868B7C1000D16CF /* LaunchScreen.storyboard */; };
 		994483232868B7C1000D16CF /* MsgZemogaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994483222868B7C1000D16CF /* MsgZemogaTests.swift */; };
 		9944832D2868B7C1000D16CF /* MsgZemogaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944832C2868B7C1000D16CF /* MsgZemogaUITests.swift */; };
@@ -25,7 +24,6 @@
 		99AE377F2868D0F000DAAF31 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE377E2868D0F000DAAF31 /* ApiController.swift */; };
 		99DD89FE286B95C10099D82A /* ApiControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD89FD286B95C10099D82A /* ApiControllerTwo.swift */; };
 		99DD8A03286B95EF0099D82A /* PostDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */; };
-		99DD8A04286B95EF0099D82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99DD8A00286B95EF0099D82A /* Assets.xcassets */; };
 		99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A01286B95EF0099D82A /* PostDetails.swift */; };
 		99DD8A0A286BB64A0099D82A /* ApiControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A09286BB64A0099D82A /* ApiControllerThree.swift */; };
 		99DD8A0C286BB7720099D82A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A0B286BB7720099D82A /* User.swift */; };
@@ -56,7 +54,6 @@
 		9944830A2868B7C0000D16CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9944830C2868B7C0000D16CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9944830F2868B7C0000D16CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		994483142868B7C1000D16CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		994483172868B7C1000D16CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		994483192868B7C1000D16CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9944831E2868B7C1000D16CF /* MsgZemogaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MsgZemogaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,7 +130,6 @@
 				9944830A2868B7C0000D16CF /* SceneDelegate.swift */,
 				9944830C2868B7C0000D16CF /* ViewController.swift */,
 				9944830E2868B7C0000D16CF /* Main.storyboard */,
-				994483142868B7C1000D16CF /* Assets.xcassets */,
 				994483162868B7C1000D16CF /* LaunchScreen.storyboard */,
 				994483192868B7C1000D16CF /* Info.plist */,
 				99AE377C2868CED200DAAF31 /* Post.swift */,
@@ -270,8 +266,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				994483182868B7C1000D16CF /* LaunchScreen.storyboard in Resources */,
-				994483152868B7C1000D16CF /* Assets.xcassets in Resources */,
-				99DD8A04286B95EF0099D82A /* Assets.xcassets in Resources */,
 				994483102868B7C0000D16CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
