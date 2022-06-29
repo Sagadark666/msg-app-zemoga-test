@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, ManagePostDelegate{
+    
       
     let api = ApiController()
     var posts = [Post]()
@@ -52,6 +53,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             let postCard = sender as! PostCellCT
             postDetailVC?.postId = postCard.postId
             postDetailVC?.userId = postCard.userId
+            postDetailVC?.arrayPosition = postCard.arrayPosition
+        }
+        if segue.identifier == "loadPost"{
+            guard let postDetailsVC = segue.destination as?
+                    PostDetailsVC else {return}
+            postDetailsVC.delegate = self
         }
     }
     
@@ -65,6 +72,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         post.postId = posts[indexPath.row].id
         post.userId = posts[indexPath.row].userId
+        post.arrayPosition = indexPath.row
         
         post.postTitle.text = posts[indexPath.row].title
         post.favIcon.image = UIImage(named: "star-off")
@@ -88,5 +96,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     func reloadPost(){
         collectionView.reloadData()
     }
+    
+    func setDelete(postId: Int) {
+        posts.remove(at: postId)
+        reloadPost()
+    }
+    
+    func setFavorite(postId: Int) {
+        print(postId)
+    }
+    
+
     
 }

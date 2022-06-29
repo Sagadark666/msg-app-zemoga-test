@@ -208,7 +208,11 @@
                     <navigationItem key="navigationItem" id="7ll-ee-avD">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="bookmarks" id="7fi-po-Y2Y"/>
-                            <barButtonItem systemItem="trash" id="twQ-3X-co3"/>
+                            <barButtonItem systemItem="trash" id="twQ-3X-co3">
+                                <connections>
+                                    <action selector="deletePostWithSender:" destination="8ex-Qi-rKS" id="Vz9-e7-BQl"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>

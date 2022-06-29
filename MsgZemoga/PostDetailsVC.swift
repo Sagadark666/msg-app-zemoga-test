@@ -18,9 +18,17 @@ class PostDetailsVC : UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var commentsCollectionView: UICollectionView!
     
+    @IBAction func deletePost(sender: UIBarButtonItem){
+        delegate?.setDelete(postId: arrayPosition)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     var postId : Int!
     var userId : Int!
+    var arrayPosition : Int!
     var comments = [Comment]()
+    
+    var delegate : ManagePostDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,15 +95,4 @@ class PostDetailsVC : UIViewController, UICollectionViewDataSource, UICollection
     func reloadPost(){
         commentsCollectionView.reloadData()
     }
-
-
-    
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "loadPost"{
-            guard let postsVC = segue.source as?
-                    ViewController else {return}
-            postsVC.delegate = self
-            
-        }
-    }*/
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9900382B286BE5C60014A1B4 /* ManagePostDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9900382A286BE5C60014A1B4 /* ManagePostDelegate.swift */; };
 		992F293D286A5A97003F322C /* PostCellCT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F293C286A5A97003F322C /* PostCellCT.swift */; };
 		994483092868B7C0000D16CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994483082868B7C0000D16CF /* AppDelegate.swift */; };
 		9944830B2868B7C0000D16CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944830A2868B7C0000D16CF /* SceneDelegate.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9900382A286BE5C60014A1B4 /* ManagePostDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagePostDelegate.swift; sourceTree = "<group>"; };
 		992F293C286A5A97003F322C /* PostCellCT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellCT.swift; sourceTree = "<group>"; };
 		994483052868B7C0000D16CF /* MsgZemoga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MsgZemoga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		994483082868B7C0000D16CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				998175F9286BCFB9006806ED /* ApiControllerFour.swift */,
 				998175FB286BD044006806ED /* Comment.swift */,
 				998175FD286BD148006806ED /* CommentCellCT.swift */,
+				9900382A286BE5C60014A1B4 /* ManagePostDelegate.swift */,
 			);
 			path = MsgZemoga;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99DD8A0C286BB7720099D82A /* User.swift in Sources */,
+				9900382B286BE5C60014A1B4 /* ManagePostDelegate.swift in Sources */,
 				992F293D286A5A97003F322C /* PostCellCT.swift in Sources */,
 				99DD89FE286B95C10099D82A /* ApiControllerTwo.swift in Sources */,
 				99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */,
