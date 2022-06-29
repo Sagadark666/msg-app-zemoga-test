@@ -207,7 +207,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="7ll-ee-avD">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="bookmarks" id="7fi-po-Y2Y">
+                            <barButtonItem title="FavButton" image="star" catalog="system" id="7fi-po-Y2Y">
+                                <inset key="largeContentSizeImageInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <action selector="addToFavoritesWithSender:" destination="8ex-Qi-rKS" id="CGj-Tk-I8d"/>
                                 </connections>
@@ -220,6 +221,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="FavButton" destination="7fi-po-Y2Y" id="PEX-vm-0SC"/>
                         <outlet property="authorEmail" destination="TDa-SX-PMC" id="5zb-cn-lKD"/>
                         <outlet property="authorName" destination="6oR-8g-zoQ" id="owx-j5-lLh"/>
                         <outlet property="authorPhone" destination="KCC-sQ-4Oh" id="FKF-xz-fKa"/>
@@ -253,6 +255,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="star" catalog="system" width="32" height="32"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

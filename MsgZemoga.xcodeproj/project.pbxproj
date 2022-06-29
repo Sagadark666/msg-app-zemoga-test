@@ -27,7 +27,6 @@
 		99DD8A03286B95EF0099D82A /* PostDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */; };
 		99DD8A04286B95EF0099D82A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99DD8A00286B95EF0099D82A /* Assets.xcassets */; };
 		99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A01286B95EF0099D82A /* PostDetails.swift */; };
-		99DD8A08286BA4330099D82A /* PostOpenDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A07286BA4330099D82A /* PostOpenDelegate.swift */; };
 		99DD8A0A286BB64A0099D82A /* ApiControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A09286BB64A0099D82A /* ApiControllerThree.swift */; };
 		99DD8A0C286BB7720099D82A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A0B286BB7720099D82A /* User.swift */; };
 /* End PBXBuildFile section */
@@ -74,7 +73,6 @@
 		99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsVC.swift; sourceTree = "<group>"; };
 		99DD8A00286B95EF0099D82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99DD8A01286B95EF0099D82A /* PostDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetails.swift; sourceTree = "<group>"; };
-		99DD8A07286BA4330099D82A /* PostOpenDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOpenDelegate.swift; sourceTree = "<group>"; };
 		99DD8A09286BB64A0099D82A /* ApiControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiControllerThree.swift; sourceTree = "<group>"; };
 		99DD8A0B286BB7720099D82A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +139,6 @@
 				99AE377C2868CED200DAAF31 /* Post.swift */,
 				99AE377E2868D0F000DAAF31 /* ApiController.swift */,
 				992F293C286A5A97003F322C /* PostCellCT.swift */,
-				99DD8A07286BA4330099D82A /* PostOpenDelegate.swift */,
 				99DD8A09286BB64A0099D82A /* ApiControllerThree.swift */,
 				99DD8A0B286BB7720099D82A /* User.swift */,
 				998175F9286BCFB9006806ED /* ApiControllerFour.swift */,
@@ -305,7 +302,6 @@
 				992F293D286A5A97003F322C /* PostCellCT.swift in Sources */,
 				99DD89FE286B95C10099D82A /* ApiControllerTwo.swift in Sources */,
 				99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */,
-				99DD8A08286BA4330099D82A /* PostOpenDelegate.swift in Sources */,
 				99DD8A0A286BB64A0099D82A /* ApiControllerThree.swift in Sources */,
 				9944830D2868B7C0000D16CF /* ViewController.swift in Sources */,
 				998175FE286BD148006806ED /* CommentCellCT.swift in Sources */,

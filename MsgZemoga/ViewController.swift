@@ -54,6 +54,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             postDetailVC?.postId = postCard.postId
             postDetailVC?.userId = postCard.userId
             postDetailVC?.arrayPosition = postCard.arrayPosition
+            postDetailVC?.isFavorite = postCard.isFavorite
         }
         if segue.identifier == "loadPost"{
             guard let postDetailsVC = segue.destination as?
@@ -75,6 +76,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         post.arrayPosition = indexPath.row
         
         post.postTitle.text = posts[indexPath.row].title
+        post.isFavorite = posts[indexPath.row].isFavorite
         if posts[indexPath.row].isFavorite {
             post.favIcon.image = UIImage(named: "star-on")
         } else{

@@ -18,6 +18,9 @@ class PostDetailsVC : UIViewController, UICollectionViewDataSource, UICollection
     
     @IBOutlet weak var commentsCollectionView: UICollectionView!
     
+    
+    @IBOutlet weak var FavButton: UIBarButtonItem!
+    
     @IBAction func deletePost(sender: UIBarButtonItem){
         delegate?.setDelete(postId: arrayPosition)
         self.navigationController?.popViewController(animated: true)
@@ -30,6 +33,7 @@ class PostDetailsVC : UIViewController, UICollectionViewDataSource, UICollection
     
     var postId : Int!
     var userId : Int!
+    var isFavorite : Bool!
     var arrayPosition : Int!
     var comments = [Comment]()
     
@@ -38,6 +42,10 @@ class PostDetailsVC : UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if(isFavorite){
+            FavButton.image = UIImage(systemName: "star.fill")
+        }
+    
         ApiControllerTwo().fetchPosts(postId: postId){
             [weak self] (post) in
             
