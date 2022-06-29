@@ -99,6 +99,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     
     func reloadPost(){
+        posts.sort{$0.isFavorite && !$1.isFavorite}
         collectionView.reloadData()
     }
     
