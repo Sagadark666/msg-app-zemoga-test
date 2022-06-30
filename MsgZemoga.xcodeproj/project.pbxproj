@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		998175FC286BD044006806ED /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998175FB286BD044006806ED /* Comment.swift */; };
 		998175FE286BD148006806ED /* CommentCellCT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998175FD286BD148006806ED /* CommentCellCT.swift */; };
 		99AE377D2868CED200DAAF31 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AE377C2868CED200DAAF31 /* Post.swift */; };
+		99CB8EDA286D27DA00FADE21 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 99CB8ED9286D27DA00FADE21 /* README.md */; };
 		99DD8A03286B95EF0099D82A /* PostDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */; };
 		99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A01286B95EF0099D82A /* PostDetails.swift */; };
 		99DD8A0C286BB7720099D82A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A0B286BB7720099D82A /* User.swift */; };
@@ -66,6 +67,7 @@
 		998175FB286BD044006806ED /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		998175FD286BD148006806ED /* CommentCellCT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCellCT.swift; sourceTree = "<group>"; };
 		99AE377C2868CED200DAAF31 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		99CB8ED9286D27DA00FADE21 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsVC.swift; sourceTree = "<group>"; };
 		99DD8A00286B95EF0099D82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99DD8A01286B95EF0099D82A /* PostDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetails.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		994483072868B7C0000D16CF /* MsgZemoga */ = {
 			isa = PBXGroup;
 			children = (
+				99CB8ED9286D27DA00FADE21 /* README.md */,
 				993695CF286CCE02000F0F34 /* src */,
 				99DD8A00286B95EF0099D82A /* Assets.xcassets */,
 				994483192868B7C1000D16CF /* Info.plist */,
@@ -294,7 +297,7 @@
 				};
 			};
 			buildConfigurationList = 994483002868B7C0000D16CF /* Build configuration list for PBXProject "MsgZemoga" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -318,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99CB8EDA286D27DA00FADE21 /* README.md in Resources */,
 				994483182868B7C1000D16CF /* LaunchScreen.storyboard in Resources */,
 				994483102868B7C0000D16CF /* Main.storyboard in Resources */,
 			);
