@@ -77,7 +77,7 @@ class MsgZemogaTests: XCTestCase {
     
     let controller = PostDashboardVC()
     
-    func testLoadDashboadController(){
+    /*func testLoadDashboadController(){
         let cachedPostAssertion = Post(id: 54, userId: 6, title: "sit asperiores ipsam eveniet odio non quia", isFavorite: false)
         
         controller.viewDidLoad()
@@ -89,7 +89,7 @@ class MsgZemogaTests: XCTestCase {
         XCTAssertEqual(results.first!.title, cachedPostAssertion.title)
         XCTAssertEqual(results.first!.isFavorite, cachedPostAssertion.isFavorite)
         
-    }
+    }*/
     
     func testDeleteAllPosts(){
         controller.viewDidLoad()

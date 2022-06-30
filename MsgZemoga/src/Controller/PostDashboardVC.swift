@@ -12,10 +12,9 @@ class PostDashboardVC: UIViewController, UICollectionViewDataSource, UICollectio
     
       
     let api = ApiController()
-    //var posts = [Post]()
+    let collectionController = CollectionController()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var cachedPost = [PostEntity]()
-    //var cachedPost = PostEntity()
     
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -134,37 +133,10 @@ class PostDashboardVC: UIViewController, UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let post = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCellCT
-        
-        post.postId = Int(cachedPost[indexPath.row].id)
-        post.userId = Int(cachedPost[indexPath.row].userId)
-        post.arrayPosition = indexPath.row
-        
-        post.postTitle.text = cachedPost[indexPath.row].title
-        post.isFavorite = cachedPost[indexPath.row].isFavorite
-        
-        if cachedPost[indexPath.row].isFavorite {
-            post.favIcon.image = UIImage(systemName: "star.fill")
-        } else{
-            post.favIcon.image = UIImage(systemName: "star")
-        }
-    
-        post.contentView.layer.cornerRadius = 4.0
-        post.contentView.layer.borderWidth = 1.0
-        post.contentView.layer.borderColor = UIColor.clear.cgColor
-        post.contentView.layer.masksToBounds = false
-        post.layer.shadowColor = UIColor.gray.cgColor
-        post.layer.shadowOffset = CGSize(width: 0, height: 1.0)
-        post.layer.shadowRadius = 4.0
-        post.layer.shadowOpacity = 1.0
-        post.layer.masksToBounds = false
-        post.layer.shadowPath = UIBezierPath(roundedRect: post.bounds, cornerRadius: post.contentView.layer.cornerRadius).cgPath
-        
+        var post = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCell", for: indexPath) as! PostCellCT
+        post = collectionController.setPostCell(post: post, posts: cachedPost, index: indexPath.row)
         return post
     }
-    
-    
     
     func reloadPost(){
         cachedPost.sort{$0.isFavorite && !$1.isFavorite}
@@ -195,4 +167,5 @@ class PostDashboardVC: UIViewController, UICollectionViewDataSource, UICollectio
 
     
 }
+
 

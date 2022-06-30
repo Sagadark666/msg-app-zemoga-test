@@ -26,6 +26,7 @@
 		99DD8A03286B95EF0099D82A /* PostDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */; };
 		99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A01286B95EF0099D82A /* PostDetails.swift */; };
 		99DD8A0C286BB7720099D82A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DD8A0B286BB7720099D82A /* User.swift */; };
+		99EE809A286D858A008E1636 /* CollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EE8099286D858A008E1636 /* CollectionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		99DD8A00286B95EF0099D82A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99DD8A01286B95EF0099D82A /* PostDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetails.swift; sourceTree = "<group>"; };
 		99DD8A0B286BB7720099D82A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		99EE8099286D858A008E1636 /* CollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +120,7 @@
 		993695D1286CCE5A000F0F34 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				993695D4286CCEDA000F0F34 /* CollectionCellController */,
+				993695D4286CCEDA000F0F34 /* Collection */,
 				99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */,
 				9944830C2868B7C0000D16CF /* PostDashboardVC.swift */,
 			);
@@ -144,13 +146,14 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
-		993695D4286CCEDA000F0F34 /* CollectionCellController */ = {
+		993695D4286CCEDA000F0F34 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
 				992F293C286A5A97003F322C /* PostCellCT.swift */,
 				998175FD286BD148006806ED /* CommentCellCT.swift */,
+				99EE8099286D858A008E1636 /* CollectionController.swift */,
 			);
-			path = CollectionCellController;
+			path = Collection;
 			sourceTree = "<group>";
 		};
 		994482FC2868B7C0000D16CF = {
@@ -297,6 +300,7 @@
 				992F293D286A5A97003F322C /* PostCellCT.swift in Sources */,
 				99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */,
 				9944830D2868B7C0000D16CF /* PostDashboardVC.swift in Sources */,
+				99EE809A286D858A008E1636 /* CollectionController.swift in Sources */,
 				998175FE286BD148006806ED /* CommentCellCT.swift in Sources */,
 				994A7247286C9EA8007AFB08 /* MsgZemoga.xcdatamodeld in Sources */,
 				994483092868B7C0000D16CF /* AppDelegate.swift in Sources */,
