@@ -7,13 +7,12 @@ The base language for this project, as per usual nowadays for iOS development, w
 There were some hicups along the way, as with any development project, specially because is the first time that I worked with the Codable/Decodable classes, and other other languages handle async transactions differently. But at the end, I believe that accomplished the goal of delivering a top of the line product.
 
 Install Instructions
- 
- Since I did not used thirdparty libraries the installation process is fairly simple.
-    
-    - This project relies on Swift 5, hence it is only compatible with Xcode10.2 or later.
-    - The git repository is public, a "git clone https://github.com/Sagadark666/msg-app-zemoga-test.git" will suffice.
-    - The Core Data package is already included.
-    - There is no additional setup to be done, the project is ready to be build and deployed.
+
+Since I did not used thirdparty libraries the installation process is fairly simple.
+- This project relies on Swift 5, hence it is only compatible with Xcode10.2 or later.
+- The git repository is public, a "git clone https://github.com/Sagadark666/msg-app-zemoga-test.git" will suffice.
+- The Core Data package is already included.
+- There is no additional setup to be done, the project is ready to be build and deployed.
 
 Desing Concept
 
