@@ -25,7 +25,7 @@ Features
 - Is capable of executing all of the task requested (Load all post, load single post with user and comment information, marking as favorite and deleting single posts, and deleting them all at once, reloading post while keeping current information).
 - The app is able to resize dynammicaly to screen size.
 - As per the proposed Web transaction handler does not seem be performance issues.
-
+- Core Data is implemented for Dashboard and fully functional to cache the state of all of the posts.
 
 App Structure
 
@@ -33,6 +33,16 @@ App Structure
 - Model: The are four classes, Post, PostDetails, User and Comments. All four of them use deserialization, or as is invoked in Swfit Codable. The only data model with Coding Keys is Post, which allow it to contain isFavorite property.
 - View: The screen adaptability was achieve trhough Constrains. The dynamic lists are built upon CollectionViews.
 - Controller: There are only two controllers, each for the Views available. There are also two interfaces that take care of the information sent back and forth along with a delegate to handle the navigation functions (Delete and Fav Post).  
+
+Unit Tests
+
+It was written 13 unit test to evaluate all around behaviour of the app. These 13 test can be divided into three categories: Networking, Inizalization of Controllers, and Data Caching Modeling.
+
+- Netwoking: Response of the Request Handler and of the Api. 
+- Inizalization: Controller has the proper data to init.
+- Data Modeling: Deleting, Reloading, and Setting Favorites.
+
+All of the 13 test where correctly executed and passed as can be seen underneath:
 
 Credits
 
