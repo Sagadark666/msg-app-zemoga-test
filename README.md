@@ -36,13 +36,7 @@ App Structure
 
 Unit Tests
 
-It was written 13 unit test to evaluate all around behaviour of the app. These 13 test can be divided into three categories: Networking, Inizalization of Controllers, and Data Caching Modeling.
-
-- Netwoking: Response of the Request Handler and of the Api. 
-- Inizalization: Controller has the proper data to init.
-- Data Modeling: Deleting, Reloading, and Setting Favorites.
-
-All of the 13 test where correctly executed and passed as can be seen underneath:
+It was written 5 unit test to evaluate the netwrkoing behaviour of the app which is the core of this app. 
 
 Credits
 
