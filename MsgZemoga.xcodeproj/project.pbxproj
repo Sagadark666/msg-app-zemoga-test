@@ -13,7 +13,7 @@
 		993695D8286CD1FA000F0F34 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993695D7286CD1FA000F0F34 /* RequestHandler.swift */; };
 		994483092868B7C0000D16CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994483082868B7C0000D16CF /* AppDelegate.swift */; };
 		9944830B2868B7C0000D16CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944830A2868B7C0000D16CF /* SceneDelegate.swift */; };
-		9944830D2868B7C0000D16CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944830C2868B7C0000D16CF /* ViewController.swift */; };
+		9944830D2868B7C0000D16CF /* PostDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9944830C2868B7C0000D16CF /* PostDashboardVC.swift */; };
 		994483102868B7C0000D16CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9944830E2868B7C0000D16CF /* Main.storyboard */; };
 		994483182868B7C1000D16CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 994483162868B7C1000D16CF /* LaunchScreen.storyboard */; };
 		994483232868B7C1000D16CF /* MsgZemogaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994483222868B7C1000D16CF /* MsgZemogaTests.swift */; };
@@ -53,7 +53,7 @@
 		994483052868B7C0000D16CF /* MsgZemoga.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MsgZemoga.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		994483082868B7C0000D16CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9944830A2868B7C0000D16CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9944830C2868B7C0000D16CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9944830C2868B7C0000D16CF /* PostDashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDashboardVC.swift; sourceTree = "<group>"; };
 		9944830F2868B7C0000D16CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		994483172868B7C1000D16CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		994483192868B7C1000D16CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 			children = (
 				993695D4286CCEDA000F0F34 /* CollectionCellController */,
 				99DD89FF286B95EF0099D82A /* PostDetailsVC.swift */,
-				9944830C2868B7C0000D16CF /* ViewController.swift */,
+				9944830C2868B7C0000D16CF /* PostDashboardVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -348,7 +348,7 @@
 				9900382B286BE5C60014A1B4 /* ManagePostDelegate.swift in Sources */,
 				992F293D286A5A97003F322C /* PostCellCT.swift in Sources */,
 				99DD8A05286B95EF0099D82A /* PostDetails.swift in Sources */,
-				9944830D2868B7C0000D16CF /* ViewController.swift in Sources */,
+				9944830D2868B7C0000D16CF /* PostDashboardVC.swift in Sources */,
 				998175FE286BD148006806ED /* CommentCellCT.swift in Sources */,
 				994A7247286C9EA8007AFB08 /* MsgZemoga.xcdatamodeld in Sources */,
 				994483092868B7C0000D16CF /* AppDelegate.swift in Sources */,

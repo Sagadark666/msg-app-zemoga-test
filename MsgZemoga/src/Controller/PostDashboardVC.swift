@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PostDashboardVC.swift
 //  MsgZemoga
 //
 //  Created by user222400 on 6/26/22.
@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, ManagePostDelegate{
+class PostDashboardVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, ManagePostDelegate{
     
       
     let api = ApiController()
@@ -51,7 +51,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                     try self!.context.save()
                 } catch{
                     print("Se esta rompiendo al refrescar")
-                }                
+                }
                 DispatchQueue.main.async {
                     self?.reloadPost()
                 }
@@ -145,9 +145,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         post.isFavorite = cachedPost[indexPath.row].isFavorite
         
         if cachedPost[indexPath.row].isFavorite {
-            post.favIcon.image = UIImage(named: "star-on")
+            post.favIcon.image = UIImage(systemName: "star.fill")
         } else{
-            post.favIcon.image = UIImage(named: "star-off")
+            post.favIcon.image = UIImage(systemName: "star")
         }
     
         post.contentView.layer.cornerRadius = 4.0
